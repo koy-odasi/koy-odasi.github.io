@@ -1,0 +1,26 @@
+---
+title: Köy Odası
+keywords: Köy Odası, Blog
+description: Köy Odası Tanıtım Sayfası
+url: https://koy-odasi.github.io
+permalink: "/categories/:categories/:title/"
+highlighter: pygments
+markdown: rdiscount
+rdiscount:
+  extensions:
+  - smart
+author: 
+editor: 
+email: 
+cv: 
+disqus: 
+github: koy-odasi
+trello: 
+linkedin: 
+googleplus: 
+googleanalyticsid: 
+twitter: 
+facebook: 
+instagram: 
+foursquare: 
+stack: 
