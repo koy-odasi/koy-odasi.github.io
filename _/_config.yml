@@ -9,7 +9,7 @@ markdown: rdiscount
 rdiscount:
   extensions:
   - smart
-author: 
+author: koy-odasi
 editor: 
 email: 
 cv: 
