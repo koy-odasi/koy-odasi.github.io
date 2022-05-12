@@ -53,7 +53,7 @@ end
 # Her türlü kurulum yaparız abi, makarna yemeyiz abi, kebap yeriz abi
 task :install => "config:init" do
   # yeni bir kurulum mu, git kaynak dosyası ilk haliyle mi duruyor?
-  if `git config remote.origin.url`.chomp =~ %r{[:/]koy-odasi/kernel.git}
+  if `git config remote.origin.url`.chomp =~ %r{[:/]koy-odasi/core.git}
 
     # yapılandırma ayarlarını getir
     config = YAML.load_file(CONFIGFILE)
