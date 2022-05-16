@@ -1,13 +1,8 @@
 ---
 layout: post
-title: Merhaba
-category: merhaba
-tags: github core post
+title: Merhaba Dünya
+category: hello
+tags: hello world
 ---
 
-İyi günler,
-
-
-Bu **Blog**, GitHub üzerindeki [https://github.com/koy-odasi/core](https://github.com/koy-odasi/core) aracılığıyla oluşturulmuştur.
-
-
+Bu sayfa [Köy-Odası](https://github.com/koy-odasi/core) ile oluşturulmuştur.

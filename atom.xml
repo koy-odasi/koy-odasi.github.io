@@ -3,7 +3,7 @@
   <title>koy-odasi</title>
   <link href="https://koy-odasi.github.io/atom.xml" rel="self"/>
   <link href="https://koy-odasi.github.io"/>
-  <updated>2022-05-16T06:00:25+00:00</updated>
+  <updated>2022-05-16T10:26:50+00:00</updated>
   <id></id>
 
   <author>
@@ -13,13 +13,11 @@
 
   
   <entry>
-    <title>Merhaba-191206</title>
-    <link href="https://koy-odasi.github.io/categories/merhaba/merhaba-dunya/"/>
+    <title>Merhaba Dünya-191206</title>
+    <link href="https://koy-odasi.github.io/categories/hello/merhaba-dunya/"/>
     <updated>2019-12-06T00:00:00+00:00</updated>
-    <id>/categories/merhaba/merhaba-dunya</id>
-    <content type="html">&lt;p&gt;İyi günler,&lt;/p&gt;
-
-&lt;p&gt;Bu &lt;strong&gt;Blog&lt;/strong&gt;, GitHub üzerindeki &lt;a href=&quot;https://github.com/koy-odasi/core&quot;&gt;https://github.com/koy-odasi/core&lt;/a&gt; aracılığıyla oluşturulmuştur.&lt;/p&gt;
+    <id>/categories/hello/merhaba-dunya</id>
+    <content type="html">&lt;p&gt;Bu sayfa &lt;a href=&quot;https://github.com/koy-odasi/core&quot;&gt;Köy-Odası&lt;/a&gt; ile oluşturulmuştur.&lt;/p&gt;
 </content>
   </entry>
   

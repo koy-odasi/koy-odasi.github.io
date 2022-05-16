@@ -38,7 +38,6 @@ disqus:
 github:
 trello:
 linkedin:
-googleplus:
 googleanalyticsid:
 twitter:
 facebook:
@@ -79,8 +78,8 @@ task :install => "config:init" do
 
       # Url olarak sitenin barınacağı user, repoyu ekle
       url = "https://#{user}.github.io/#{repo}"
-     
-      # Baseurl olarak repo yolu ekle 
+
+      # Baseurl olarak repo yolu ekle
       config_set 'baseurl', "/#{repo}"
     else
       branch = 'master'
@@ -113,7 +112,7 @@ task :install => "config:init" do
 
       → #{url}
 
-    [ ! ] : 
+    [ ! ] :
     1 - Lütfen aşağıdaki depoyu oluşturduğunuzdan emin olun.
     2 - Depoya hiçbir dosya eklemeyin. (Ör.: README)
     (Oluşturmak için: https://github.com/new)
@@ -155,8 +154,6 @@ namespace :status do
     if (file_changes = `git status --porcelain`) != ""
       puts "Aşağıdaki dosyalarda ekleme / güncelleme / silme mevcut.\n#{file_changes}"
       abort "Repo güncellenmedi." unless ask_yesno "Güncel verileri sitenize göndermek istiyor musunuz?", true
-      # siteyi #tag gibi özellikler için  harmanla, build'in bağımlıklarıyla
-      Rake::Task['build'].invoke
       # siteyi yükle, deploy'un bağımlıklarıyla
       Rake::Task['deploy'].invoke
     end
@@ -334,11 +331,7 @@ task :new => :install do
 end
 
 # Siteyi repoya yolla
-task :deploy => :install do
-
-  # siteyi harmanla, build'in bağımlıklarıyla
-  Rake::Task['build'].invoke
-
+task :deploy => [:install, :build] do
   # depoya yolla
   `git add .`
   `git add -u`
@@ -364,6 +357,24 @@ task :find, :word do |task, args|
 
       İçerik olarak benzer dosya isimleri → \n#{filecontents}
     "
+  end
+end
+
+# Sitede bulunan gönderilerden en son düzenleneni aç
+task :last do
+
+  # bir şekilde editör kullanmalıyız
+  if ([nil, '']).include?(editor = config_get('editor'))
+    config_set "editor", ask_default("Kullandığınız Editör İsmi: ", "gedit")
+  end
+
+  chdir "#{SOURCE_DIR}/#{POST_DIR}" do
+    # son düzenlenen dosyanın ismini bul, son satırdaki gereksiz gelen `?` satırı chop ile sil
+    # kaynak : https://stackoverflow.com/questions/4561895/how-to-recursively-find-the-latest-modified-file-in-a-directory
+    filename = `find . -type f -printf '%T@ %p\n' \ | sort -n | tail -1 | cut -f2- -d" "`.chop
+
+    # dosyamızı yapılandırma dosyasında belirtilen editörle aç
+    sh editor, filename
   end
 end
 
