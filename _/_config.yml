@@ -1,7 +1,8 @@
+---
 title: Köy Odası
 keywords: Köy Odası, Blog
 description: Köy Odası Tanıtım Sayfası
-baseurl:
+baseurl: 
 url: https://koy-odasi.github.io
 permalink: "/categories/:categories/:title/"
 highlighter: pygments
@@ -9,7 +10,7 @@ markdown: rdiscount
 rdiscount:
   extensions:
   - smart
-author: koy-odasi
+author: Köy Odası
 editor: vim
 email: 
 cv: 
@@ -17,7 +18,7 @@ disqus:
 github: koy-odasi
 trello: 
 linkedin: 
-googletagid: 
+googletagid: GTM-WQMB7GM
 twitter: 
 facebook: 
 instagram: 

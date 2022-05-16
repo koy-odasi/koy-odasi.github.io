@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>koy-odasi</title>
+  <title>Köy Odası</title>
   <link href="https://koy-odasi.github.io/atom.xml" rel="self"/>
   <link href="https://koy-odasi.github.io"/>
-  <updated>2022-05-16T13:22:47+00:00</updated>
+  <updated>2022-05-16T13:24:11+00:00</updated>
   <id></id>
 
   <author>
-    <name>koy-odasi</name>
+    <name>Köy Odası</name>
     <email></email>
   </author>
 
