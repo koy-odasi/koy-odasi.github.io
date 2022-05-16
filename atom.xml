@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>koy-odasi</title>
-  <link href="https://koy-odasi.github.io/atom.xml" rel="self"/>
-  <link href="https://koy-odasi.github.io"/>
-  <updated>2022-05-16T10:38:58+00:00</updated>
+  <title></title>
+  <link href="/atom.xml" rel="self"/>
+  <link href=""/>
+  <updated>2022-05-16T13:18:55+00:00</updated>
   <id></id>
 
   <author>
-    <name>koy-odasi</name>
+    <name></name>
     <email></email>
   </author>
 
   
   <entry>
     <title>Merhaba Dünya-191206</title>
-    <link href="https://koy-odasi.github.io/categories/hello/merhaba-dunya/"/>
+    <link href="/hello/2019/12/06/merhaba-dunya.html"/>
     <updated>2019-12-06T00:00:00+00:00</updated>
-    <id>/categories/hello/merhaba-dunya</id>
+    <id>/hello/2019/12/06/merhaba-dunya</id>
     <content type="html">&lt;p&gt;Bu sayfa &lt;a href=&quot;https://github.com/koy-odasi/core&quot;&gt;Köy-Odası&lt;/a&gt; ile oluşturulmuştur.&lt;/p&gt;
 </content>
   </entry>
