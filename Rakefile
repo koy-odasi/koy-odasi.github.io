@@ -17,6 +17,7 @@ DEFAULTS  = "
 title:
 keywords:
 description:
+baseurl:
 url:
 
 # Jekyll Configuration
@@ -76,12 +77,12 @@ task :install => "config:init" do
     if (repo.match(/[\w-]+\.github\.(?:io|com)/).nil?)
       branch = 'gh-pages'
 
-      # Alt dizin olduğu için permalink güncellemesi yap
-      config_set 'permalink', "/#{repo}/categories/:categories/:title/"
-
       # Url olarak sitenin barınacağı user, repoyu ekle
       url = "https://#{user}.github.io/#{repo}"
-    elsif 
+     
+      # Baseurl olarak repo yolu ekle 
+      config_set 'baseurl', "/#{repo}"
+    else
       branch = 'master'
 
       # Url olarak sitenin barınacağı user ekle
@@ -128,7 +129,7 @@ task :install => "config:init" do
     if branch == "gh-pages"
       switch_branch("gh-pages")
       config_set 'url', "https://#{user}.github.io/#{repo}"
-    elsif
+    else
       switch_branch("master")
       config_set 'url', "https://#{user}.github.io"
     end
@@ -403,7 +404,7 @@ def config_set key = nil, value = nil, default = nil
   config = YAML.load_file(CONFIGFILE)
   unless key and value
     config.each do |key, value|
-      config[key] = ask_default(key, value) unless %w(permalink highlighter markdown rdiscount).include? key
+      config[key] = ask_default(key, value) unless %w(permalink highlighter markdown rdiscount baseurl).include? key
     end
   else
     config[key] = default.nil? ? value : ask_default(key, value)
